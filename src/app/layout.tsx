@@ -5,7 +5,7 @@ import Navbar from '@/components/navbar'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Davi Brito Portfolio - Matrix Edition',
+  title: 'Davi Brito Portfolio - Full Stack Developer',
   description: 'A Matrix-themed portfolio showcasing my work and skills',
 }
 

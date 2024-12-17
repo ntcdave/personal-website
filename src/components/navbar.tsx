@@ -1,9 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { useTheme } from "next-themes";
-import { FaSun, FaMoon } from "react-icons/fa";
 
 const navItems = [
   { name: "Home", href: "#" },
@@ -13,15 +11,7 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
 
   return (
     <nav className="fixed w-full z-50 bg-matrix-black/80 backdrop-blur-sm">
@@ -42,12 +32,6 @@ export default function Navbar() {
                 {`> ${item.name}`}
               </a>
             ))}
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="text-matrix-light hover:matrix-glow transition-all duration-300"
-            >
-              {theme === "dark" ? <FaSun /> : <FaMoon />}
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -81,23 +65,6 @@ export default function Navbar() {
                 {`> ${item.name}`}
               </a>
             ))}
-            <button
-              onClick={() => {
-                setTheme(theme === "dark" ? "light" : "dark");
-                setIsOpen(false);
-              }}
-              className="text-matrix-light hover:matrix-glow transition-all duration-300"
-            >
-              {theme === "dark" ? (
-                <div className="flex items-center">
-                  <FaSun className="mr-2" /> Light Mode
-                </div>
-              ) : (
-                <div className="flex items-center">
-                  <FaMoon className="mr-2" /> Dark Mode
-                </div>
-              )}
-            </button>
           </div>
         </motion.div>
       </div>

@@ -33,7 +33,7 @@ export default function Footer() {
               viewport={{ once: true }}
               className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-purple-500"
             >
-              Seu Nome
+              Davi Brito
             </motion.h3>
             <motion.p
               initial={{ opacity: 0 }}
@@ -130,12 +130,12 @@ export default function Footer() {
           className="border-t border-gray-200 dark:border-gray-800 mt-12 pt-8 text-center"
         >
           <p className="text-gray-600 dark:text-gray-300 flex items-center justify-center gap-1">
-            Feito com <FaHeart className="text-red-500" /> por{" "}
+            Feito com <FaHeart className="text-red-500" /> por{"Davi Brito"}
             <a
               href="#"
               className="text-primary-500 dark:text-primary-400 hover:underline"
             >
-              Seu Nome
+              Davi Brito
             </a>
           </p>
         </motion.div>

@@ -20,7 +20,7 @@ const contactInfo = [
   {
     icon: FaMapMarkerAlt,
     title: "Localização",
-    content: "São Paulo, SP - Brasil",
+    content: "Rio Branco, AC - Brasil",
     link: "https://maps.google.com",
   },
 ];
