@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --matrix-green: #22c55e;
+  --matrix-dark: #15803d;
+  --matrix-black: #0a0f0d;
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  background-color: var(--matrix-black);
+  color: var(--matrix-green);
+  font-family: 'Courier New', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Matrix Rain Effect */
+.matrix-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.matrix-column {
+  position: absolute;
+  top: -100%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, 
+    var(--matrix-green) 0%,
+    var(--matrix-dark) 75%,
+    transparent 100%
+  );
+  animation: matrix-flow 20s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes matrix-flow {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Glow Effects */
+.matrix-glow {
+  text-shadow: 0 0 5px var(--matrix-green),
+               0 0 10px var(--matrix-green),
+               0 0 15px var(--matrix-green);
+}
+
+.matrix-box {
+  border: 1px solid var(--matrix-green);
+  box-shadow: 0 0 10px var(--matrix-green),
+              inset 0 0 10px var(--matrix-green);
+  background: rgba(10, 15, 13, 0.8);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--matrix-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--matrix-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--matrix-dark);
+}
+
+/* Links and Buttons */
+a, button {
+  color: var(--matrix-green);
+  transition: all 0.3s ease;
+}
+
+a:hover, button:hover {
+  color: #4ade80;
+  text-shadow: 0 0 8px var(--matrix-green);
+}
+
+/* Form Elements */
+input, textarea {
+  background: rgba(10, 15, 13, 0.8);
+  border: 1px solid var(--matrix-green);
+  color: var(--matrix-green);
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 10px var(--matrix-green);
+  outline: none;
+}
+
+/* Custom Classes */
+.matrix-border {
+  position: relative;
+  border: 1px solid var(--matrix-green);
+}
+
+.matrix-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 1px solid var(--matrix-green);
+  animation: border-pulse 2s infinite;
+}
+
+@keyframes border-pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
