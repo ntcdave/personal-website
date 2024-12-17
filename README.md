@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personal Portfolio Website
 
 A modern personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion.
@@ -51,3 +52,7 @@ This project can be deployed on Vercel with zero configuration.
 ## License
 
 MIT
+=======
+# persona-website
+my personal website
+>>>>>>> 3e590012c6902e2c07e979632cd5bc571ca20e15
