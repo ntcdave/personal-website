@@ -5,7 +5,6 @@ A modern personal portfolio website built with Next.js, Tailwind CSS, and Framer
 
 ## Features
 
-- 🌓 Dark/Light mode
 - 📱 Fully responsive design
 - ⚡ Fast page loads with Next.js
 - 🎨 Beautiful animations with Framer Motion
