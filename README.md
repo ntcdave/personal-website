@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Personal Portfolio Website
 
 A modern personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion.
