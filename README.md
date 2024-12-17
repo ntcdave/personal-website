@@ -39,14 +39,8 @@ A modern personal portfolio website built with Next.js, Tailwind CSS, and Framer
 src/
 ├── app/                 # App router pages
 ├── components/         # Reusable components
-├── lib/               # Utility functions
-├── types/             # TypeScript types
-└── styles/            # Global styles
 ```
 
-## Deployment
-
-This project can be deployed on Vercel with zero configuration.
 
 ## License
 
